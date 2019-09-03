@@ -1,0 +1,7 @@
+article p {
+  margin-bottom: 1rem;
+}
+
+article p:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+html lang="fr"
+  head
+    meta charset="UTF-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title
+      - if current_article
+        => current_article.data.trip
+        | |
+        =< current_article.title
+      - else
+        | Voyages
+    
+    link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"
+    link href="style.css" rel="stylesheet"
+  body
+    == yield
