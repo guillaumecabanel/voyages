@@ -1,4 +1,4 @@
-- articles = blog.articles.select { |article| article.data.trip_slug == current_page.data.trip_slug }.sort_by(&:date)
+- articles = blog.articles.reject { |article| article.data.draft }.select { |article| article.data.trip_slug == current_page.data.trip_slug }.sort_by(&:date)
 = wrap_layout :layout do
   picture
     = image_tag 'https://res.cloudinary.com/dsapqckal/image/upload/croatie/20190825_110157_dcurbl.jpg', class: 'object-cover'

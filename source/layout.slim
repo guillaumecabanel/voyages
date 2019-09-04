@@ -11,7 +11,10 @@ html lang="fr"
       - else
         | Voyages
     
+    script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.js'
+    link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.css' rel='stylesheet'
+
     link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"
-    link href="style.css" rel="stylesheet"
+    link href="/style.css" rel="stylesheet"
   body
     == yield
