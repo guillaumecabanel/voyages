@@ -1,3 +1,5 @@
+- formated_yield = video_tags_for(yield)
+
 = wrap_layout :layout do
   picture
     = image_tag current_page.data.top_image, class: 'object-cover'
@@ -15,7 +17,7 @@
             = link_to "#{current_page.article_next.title} 👉", current_page.article_next.url, class: "text-blue-600 flex-grow text-right"
 
         h2.text-2xl.font-mono.text-center.mt-4 = current_page.data.title
-      == yield
+      == formated_yield
 
       footer.flex.justify-between.items-center.mb-4.mt-6.flex-wrap
         - if current_page.article_previous && current_page.article_previous.data.trip == current_page.data.trip && !current_page.article_previous.data.draft

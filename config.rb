@@ -9,6 +9,42 @@ activate :blog do |blog|
   blog.sources = "{trip_slug}/{year}{month}{day}.html"
 end
 
+helpers do
+  def video_tags_for(content)
+    result = content.gsub(/\{video-autoplay\}\((.+)\)/,
+      <<~HTML
+<div class="video mb-2">
+  <video class="mx-auto" autoplay muted loop>
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.webm"
+    type="video/webm">
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.mp4"
+    type="video/mp4">
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.ogv"
+    type="video/ogg">
+    <a href="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.mp4">Vidéo</a>
+  </video>
+</div>
+      HTML
+    )
+
+    result.gsub(/\{video\}\((.+)\)/,
+      <<~HTML
+<div class="video mb-2">
+  <video class="mx-auto" controls>
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.webm"
+    type="video/webm">
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.mp4"
+    type="video/mp4">
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.ogv"
+    type="video/ogg">
+    <a href="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.mp4">Vidéo</a>
+  </video>
+</div>
+      HTML
+    )
+  end
+end
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
@@ -17,3 +53,6 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+
+# autoplay muted loop
