@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Chilanka&display=swap');
 
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #63b3ed;
+}
+
 article p {
   margin-bottom: 1rem;
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
@@ -29,6 +37,13 @@ img, .map, video {
 
 .bloc-notes p {
   font-family: 'Chilanka', cursive;
+}
+
+.bloc-notes img {
+  background-color: white;
+  padding: 4px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: rotate(-10deg);
 }
 
 .btn:hover {

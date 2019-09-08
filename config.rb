@@ -15,13 +15,13 @@ helpers do
       <<~HTML
 <div class="video mb-2">
   <video class="mx-auto" autoplay muted loop>
-    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.webm"
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_824/#{'\1'}.webm"
     type="video/webm">
-    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.mp4"
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_824/#{'\1'}.mp4"
     type="video/mp4">
-    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.ogv"
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_824/#{'\1'}.ogv"
     type="video/ogg">
-    <a href="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.mp4">Vidéo</a>
+    <a href="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_824/#{'\1'}.mp4">Vidéo</a>
   </video>
 </div>
       HTML
@@ -31,17 +31,21 @@ helpers do
       <<~HTML
 <div class="video mb-2">
   <video class="mx-auto" controls>
-    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.webm"
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_824/#{'\1'}.webm"
     type="video/webm">
-    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.mp4"
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_824/#{'\1'}.mp4"
     type="video/mp4">
-    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.ogv"
+    <source src="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_824/#{'\1'}.ogv"
     type="video/ogg">
-    <a href="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_640/#{'\1'}.mp4">Vidéo</a>
+    <a href="https://res.cloudinary.com/dsapqckal/video/upload/c_scale,q_80,w_824/#{'\1'}.mp4">Vidéo</a>
   </video>
 </div>
       HTML
     )
+  end
+
+  def add_non_breakable_spaces_for(content)
+    content.gsub(/ ([\!:])/, '&nbsp;\1')
   end
 end
 
