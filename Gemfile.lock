@@ -82,7 +82,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     sassc (2.2.0)
       ffi (~> 1.9)
     servolux (0.13.0)
@@ -104,7 +104,7 @@ PLATFORMS
 DEPENDENCIES
   middleman (~> 4.1)
   middleman-blog
-  redcarpet (~> 3.3, >= 3.3.3)
+  redcarpet (~> 3.5)
   slim
 
 BUNDLED WITH

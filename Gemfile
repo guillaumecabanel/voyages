@@ -4,6 +4,6 @@ source 'https://rubygems.org'
 gem "middleman", "~> 4.1"
 gem "middleman-blog"
 
-gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem 'redcarpet', '~> 3.5'
 
 gem "slim"
