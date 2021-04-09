@@ -1,8 +1,8 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VpZ3VpIiwiYSI6Im5ibEo4MWMifQ.pKwNm55XvYIIYHWSLgLqKg';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VpZ3VpIiwiYSI6ImNrbmFjdjkzYTBtZW8yeGxjaG1ncmhwd3oifQ.GOBfwS4_KNwke88o7F73aQ';
 
 const set_maps = () => {
   const maps = document.querySelectorAll('.map');
-  
+
   maps.forEach((mapHTML) => {
     mapHTML.style.height = '300px';
     mapHTML.classList.add("my-4", "mx-auto");
@@ -13,7 +13,7 @@ const set_maps = () => {
       center: coordinates,
       zoom: 10
     });
-    
+
     new mapboxgl.Marker()
       .setLngLat(coordinates)
       .addTo(map);
